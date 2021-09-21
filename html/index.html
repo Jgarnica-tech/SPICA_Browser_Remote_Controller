@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SPICAtek / Remote Control</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<script src="jquery/jquery-3.6.0.min.js"></script>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    	<script src="bootstrap/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="basic-styles.css">
+    </head>
+
+    <body>
+        <!--    Logo    -->
+        <div class="panel panel-default">
+            <img src="spica-logo.png" class="img-rounded" alt="SPICAtek's Logo" style="width:30%"/>
+        </div> 
+
+        <!--    buttons    -->
+        <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+                <!--    Tests    -->
+            <button href="#" class="btn btn-primary pcmd" data-target="op" data-cmd="testcmd1" data-par="testparameter1">Test 1</button>
+            <button href="#" class="btn btn-primary pcmd" data-target="op" data-cmd="testcmd2" data-par="testparameter2">Test 2</button>
+            <button href="#" class="btn btn-primary pcmd" data-target="op" data-cmd="testcmd3" data-par="testparameter3">Test 3</button>
+            
+            <br><br>
+
+            <!--    Device Modes    -->
+            <button href="#" class="btn btn-secondary pcmd" data-target="system/station1/dhs1" data-cmd="mode" data-par="setup">Setup</button>
+            <button href="#" class="btn btn-secondary pcmd" data-target="system/station1/dhs1" data-cmd="mode" data-par="record">Record</button>
+            <button href="#" class="btn btn-secondary pcmd" data-target="system/station1/dhs1" data-cmd="mode" data-par="playback">playback</button>
+
+            <br><br>
+            <!--    Playback panel  -->
+            <button href="#" class="btn btn-primary pcmd" data-target="system/station1/dhs1/playback" data-cmd="play" data-par="">Play</button>
+            <button href="#" class="btn btn-danger pcmd" data-target="system/station1/dhs1/playback" data-cmd="stop" data-par="">Stop</button>
+
+            <!--    Request device info     -->
+            <button href="#" class="btn btn-info" data-target="system/station1/dhs1" data-cmd="info" data-par="" id="info_btn">INFO_BTN</button>
+
+            <br><br>
+            <!--    Playback control    -->
+            <button href="#" class="btn btn-success pcmd" data-target="system/station1/dhs1/playback" data-cmd="first" data-par="">First</button>
+            <button href="#" class="btn btn-success  pcmd" data-target="system/station1/dhs1/playback" data-cmd="prev" data-par="1">Prev</button>
+            <button href="#" class="btn btn-success pcmd" data-target="system/station1/dhs1/playback" data-cmd="next" data-par="1">Next</button>
+            <button href="#" class="btn btn-success pcmd" data-target="system/station1/dhs1/playback" data-cmd="last" data-par="">Last</button>
+
+            <br><br>
+
+            <!--  Seek to normalized value  -->
+            <input type="range" value="0" min="0" max="1000" id="seek_norm">
+
+            <br><br>
+        </div>
+
+        <!--    Info table    -->
+        <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+            <table class="table table-bordered table-striped">
+                <thead id="info_thead">
+
+                </thead>
+                <tbody id="info_tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <!--    Scripts    -->
+        <script src="ajax.js"></script>
+        <script src="functions.js"></script>
+    
+    </body>
+
+</html>
+
