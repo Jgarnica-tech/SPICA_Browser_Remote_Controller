@@ -1,0 +1,28 @@
+/* Define standard variables and values for website */
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+/* Use the variables */
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+.form-range{
+$form-range-track-width:          100%;
+$form-range-track-height:         .5rem;
+$form-range-track-cursor:         pointer;
+
+$form-range-track-border-radius:  1rem;
+
+
+$form-range-thumb-width:                   1rem;
+
+$form-range-thumb-border:                  0;
+$form-range-thumb-border-radius:           1rem;
+
+
+
+$form-range-thumb-transition:              background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
